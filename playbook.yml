@@ -1,3 +1,5 @@
+DOCKER_HOST=tcp://localhost:4243 ./docker.py --pretty
+
 - name: Ansible Playbook for initiating new git repository on synology
   hosts: all
   tasks:
