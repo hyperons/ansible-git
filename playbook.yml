@@ -1,4 +1,4 @@
-- name: Ansible Playbook for initiating new git repository on synology
+- name: Test
   hosts: all
   tasks:
     - name: list existing github repos
