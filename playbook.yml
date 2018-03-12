@@ -1,7 +1,7 @@
 - name: Test
   hosts: all
   tasks:
-    - name: python-pi installed
+    - name: python-pi is present
       apt:
         name: python-pip
         state: present
