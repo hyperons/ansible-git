@@ -5,9 +5,11 @@
       apt:
         name: python-pip
         state: present
+      become: true
 
     - name: Docker-py is present
       pip: name=docker-py state=present
+      become: true
 
     - name: Application container
       docker_container:
