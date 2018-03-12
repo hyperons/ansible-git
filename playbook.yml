@@ -5,6 +5,5 @@
 
     - name: Application container
       docker:
-        name: mycontainer
-        image: hello-world
+        image: vividboarder/rpi-motioneye
         state: present
