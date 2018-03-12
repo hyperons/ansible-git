@@ -1,10 +1,10 @@
 - name: Test
   hosts: all
   tasks:
-    - name: Docker-py is present
-      pip: name=docker-py state=present
+  #  - name: Docker-py is present
+  #    pip: name=docker-py state=present
 
     - name: Application container
-      docker:
+      docker_container:
         image: vividboarder/rpi-motioneye
         state: present
