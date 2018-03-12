@@ -1,0 +1,7 @@
+---
+
+- name: Ansible Playbook for initiating new git repository on synology
+
+  tasks:
+    - name: list existing github repos
+      command: ls -l /volume1/git
