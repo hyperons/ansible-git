@@ -6,5 +6,6 @@
 
     - name: Application container
       docker_container:
+        name: motioneye
         image: vividboarder/rpi-motioneye
         state: present
