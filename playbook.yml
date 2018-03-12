@@ -1,6 +1,10 @@
 - name: Test
   hosts: all
   tasks:
+    - name: python-pi installed
+      apt:
+        name: pythin-pip
+        state: present
   #  - name: Docker-py is present
   #    pip: name=docker-py state=present
 
