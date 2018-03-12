@@ -2,4 +2,10 @@
   hosts: all
   tasks:
     - name: list existing github repos
-      command: ls -l {{dir}}
+      command: ls -l /home/pi
+
+    - name: Application container
+      docker:
+        name: mycontainer
+        image: hello-world
+        state: present
