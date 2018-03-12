@@ -1,8 +1,7 @@
 - name: Test
   hosts: all
   tasks:
-    - name: list existing github repos
-      command: ls -l /home/pi
+
 
     - name: Application container
       docker:
