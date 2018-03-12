@@ -1,4 +1,3 @@
----
 - name: Ansible Playbook for initiating new git repository on synology
   hosts: all
   tasks:
