@@ -17,6 +17,13 @@
         email: "{{ docker_hub_email }}"
         password: "{{ docker_hub_password }}"
 
+    - name: Directory for Node-Red Data
+      file: /home/pi/NODE-RED-DATA
+      owner: root
+      group: root
+      mode: 0777
+      state: directory
+
     - name: Application container
       docker_container:
         name: nodered
