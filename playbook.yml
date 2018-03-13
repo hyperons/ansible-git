@@ -15,7 +15,7 @@
       docker_container:
         name: motioneye
         image: vividboarder/rpi-motioneye
-        state: present
+        state: started
         detach: true
         ports:
           - "8765:8765"
