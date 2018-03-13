@@ -18,7 +18,8 @@
         password: "{{ docker_hub_password }}"
 
     - name: Directory for Node-Red Data
-      file: /home/pi/NODE-RED-DATA
+      file:
+        path: /home/pi/NODE-RED-DATA
         owner: root
         group: root
         mode: 0777
