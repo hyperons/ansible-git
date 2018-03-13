@@ -23,7 +23,7 @@
         mode: 0777
         state: directory
 
-    - name: Application container
+    - name: Nodered
       docker_container:
         name: nodered
         image: jamfac/rpi-node-red
