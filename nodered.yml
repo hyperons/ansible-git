@@ -14,7 +14,7 @@
     - name: Docker Login
       docker_login:
         username: jamfac
-        password: {{docker_hub_password}}
+        password: "{{ docker_hub_password }}"
 
     - name: Application container
       docker_container:
