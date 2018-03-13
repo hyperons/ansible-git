@@ -23,18 +23,18 @@
         mode: 0777
         state: directory
 
+    - name: Stop Nodered
+      docker_container:
+        name: nodered
+        image: jamfac/rpi-node-red
+        state: stopped
+
     - name: Enable projects in Nodered
       copy:
         src: settings.js
         dest: /home/pi/NODE-RED-DATA/settings.js
 
-    editorTheme: {
-    projects: {
-            enabled: true
-    }
-}
-
-    - name: Nodered
+    - name: Start Nodered
       docker_container:
         name: nodered
         image: jamfac/rpi-node-red
