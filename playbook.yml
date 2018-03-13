@@ -16,3 +16,11 @@
         name: motioneye
         image: vividboarder/rpi-motioneye
         state: present
+        detach: true
+        ports:
+          - "8765:8765"
+        volumes:
+          - "/home/pi/MOTION:/var/lib/motioneye"
+          - "/home/pi/ETC:/etc/motioneye"
+        devices:
+          - "/dev/video0"
