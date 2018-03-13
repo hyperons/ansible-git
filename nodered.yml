@@ -13,14 +13,14 @@
 
     - name: Application container
       docker_container:
-        name: motioneye
-        image: vividboarder/rpi-motioneye
+        name: nodered
+        image: jamfac/rpi-node-red
         state: started
         detach: true
         ports:
-          - "8765:8765"
+          - "1880:1880"
         volumes:
-          - "/home/pi/MOTION:/var/lib/motioneye"
-          - "/home/pi/ETC:/etc/motioneye"
+          - "/home/pi/NODE-RED-DATA:/data"
+          - "/home/pi:/home"
         devices:
           - "/dev/video0"
