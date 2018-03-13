@@ -11,11 +11,16 @@
       pip: name=docker-py state=present
       become: true
 
+    - name: Docker Login
+      docker_login:
+        username: jamfac
+        password: {{docker_hub_login}}
+        
     - name: Application container
       docker_container:
         name: nodered
         image: jamfac/rpi-node-red
-        state: started
+        state: present
         detach: true
         ports:
           - "1880:1880"
