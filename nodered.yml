@@ -23,6 +23,17 @@
         mode: 0777
         state: directory
 
+    - name: Enable projects in Nodered
+      copy:
+        src: settings.js
+        dest: /home/pi/NODE-RED-DATA/settings.js
+
+    editorTheme: {
+    projects: {
+            enabled: true
+    }
+}
+
     - name: Nodered
       docker_container:
         name: nodered
