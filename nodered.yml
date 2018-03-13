@@ -27,7 +27,7 @@
       docker_container:
         name: nodered
         image: jamfac/rpi-node-red
-        state: present
+        state: started
         detach: true
         ports:
           - "1880:1880"
