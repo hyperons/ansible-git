@@ -20,8 +20,6 @@
     - name: Directory for Node-Red Data
       file:
         path: /home/pi/NODE-RED-DATA
-        owner: root
-        group: root
         mode: 0777
         state: directory
 
