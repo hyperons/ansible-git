@@ -1,0 +1,26 @@
+- name: Test
+  hosts: all
+  tasks:
+    - name: python-pi is present
+      apt:
+        name: python-pip
+        state: present
+      become: true
+
+    - name: Docker-py is present
+      pip: name=docker-py state=present
+      become: true
+
+    - name: Application container
+      docker_container:
+        name: motioneye
+        image: vividboarder/rpi-motioneye
+        state: started
+        detach: true
+        ports:
+          - "8765:8765"
+        volumes:
+          - "/home/pi/MOTION:/var/lib/motioneye"
+          - "/home/pi/ETC:/etc/motioneye"
+        devices:
+          - "/dev/video0"
